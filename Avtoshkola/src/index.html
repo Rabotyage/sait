@@ -3,7 +3,7 @@
 	<head> 
 		<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1"> 
 
-			<title>Это автошкола ежже</title> 
+			<title> Это автошкола ежже</title> 
 
 	
 
@@ -14,11 +14,11 @@
 		<style> 
 		header {
 		 display: block; /* Для старых браузеров */
-		 height: 100px; /* Высота шапки */
-		 background: url(../img/background.jpg) no-repeat center bottom;
+		 height: 10px; /* Высота шапки */
+				/* no-repeat center bottom;*/
 		}
 		.header-bg img {
-		    position: relative; /* Относительное позиционирование */
+		    position: center; /* Относительное позиционирование */
 		    top: 40px; /* Сдвигаем картинку вниз */
 		   }
 		   .content{
@@ -26,15 +26,15 @@
 		   	height: 800px;
 		   }
 		   .title{
-		 font-size: 36px;
-		 padding-top: 10px;
+
+		position: relative;
 		 text-align: center;
-		}
-		.menu{
-		 list-style: none;
-		 position: absolute;
-		 top: 10px;
-		 right: 300px;
+		 margin: 2;
+		 }		
+
+		 		.menu{
+		 position:auto;
+		 
 		}
 
 
@@ -62,6 +62,7 @@
 
 		.ramka2{
 	height: auto;
+	width: auto;
 	position: center;
     margin: 0 auto;
     border-color: white;
@@ -115,14 +116,16 @@
 
 	</head>  
 	<body> 
+		<div class = "title"> <a href="https://rabotyage.github.io/sait/Avtoshkola/src/index.html"><img src="../img/logo.png"></a></div>
 		<header>
-			<div class = "title">Автокола XXI век</div>
-			<div class = "menu">
-				<ul class= "menu">
-			  <li><a href = "#">Контакты</a></li>
-			  <li><a href = "#">О нас</a></li>
-			  <li><a href = "#">Услуги</a></li>
-			</ul>
+			
+				<div class= "menu">
+			  <a href = "#">Контакты</a>
+			  <a href = "#">О нас</a>
+			  <a href = "#">Услуги</a>
+			</div>
+		</div>
+
   
 		</header>
 
@@ -146,7 +149,7 @@
 
 <h2>Звоните: +7 (495) 227-26-32. Наш адрес: </h2>
 
-	<h3>г. Москва, м. Рязанский проспект, ул. Новокузьминская, дом 25,</h3>
+	<h3>г. Москва, м. Рязанский проспект, ул. Новокузьминская, дом 5,</h3>
 
 
 <p>Хотите ощущать удовольствие от поездки? Стремитесь стать уверенным участником дорожного движения?
@@ -168,10 +171,10 @@
 	
 	var ramka1 = document.querySelector(".ramka1")
 	var MassivKnopok = document.querySelectorAll(".knopka");
-	var MassivPosKnopok = [[23,44],[46.2,32.4],[54,32.4],[56.2,32.4],[47.3,39.1],[51.4,34.4],[55.4,46.4],[47.4,46.4]];
+	var MassivPosKnopok = [[23.5,46],[46.2,32.4],[54,32.4],[56.2,32.4],[47.3,39.1],[51.4,34.4],[55.4,46.4],[47.4,46.4]];
 
 	var ContentInKnopki = [
-		"<div style='width: 120px; height:120px; background-color: #fff;'>Кароче че хочешь сюда могешь</div>",
+		"<div style='width: 120px; height:120px; background-color: #fff;'>Цены</div>",
 		"<img src='../лев.jpg' width=580> Suda Че хочешь ставишь",
 		"<img src='../маыпввы.jpg>",
 		"<img src='../лев.jpg'>",
