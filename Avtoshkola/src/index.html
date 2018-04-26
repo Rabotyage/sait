@@ -12,12 +12,33 @@
 
 
 		<style> 
-		.img-priborka
-	{
-  max-width: 100%;
-  size: contain;
-  border-radius: 28px;
-	}
+		header {
+ display: block; /* Для старых браузеров */
+ height: 100px; /* Высота шапки */
+ background: url(../img/background.jpg) no-repeat center bottom;
+}
+.header-bg img {
+    position: relative; /* Относительное позиционирование */
+    top: 40px; /* Сдвигаем картинку вниз */
+   }
+   .content{
+   	position: center;
+   	height: 800px;
+   }
+   .title{
+ font-size: 36px;
+ padding-top: 10px;
+ text-align: center;
+}
+.menu{
+ list-style: none;
+ position: absolute;
+ top: 10px;
+ right: 300px;
+}
+
+
+	
 		.ramka1{
 	height: 800px;
 	position: center;
@@ -27,10 +48,11 @@
     border-radius: 28px;
     border-width: 5px;
     background-color:white; 
-     background: url(../img/Фон.jpg) no-repeat;
+    background: url(../img/Фон.jpg) no-repeat;
     background-height: contain;
 	background-position: center;
 	background-size: 100%;} 
+
 
 		.ramka2{
 	height: auto;
@@ -39,7 +61,19 @@
     border-color: white;
     border-style:solid;
  	border-width: 5px;
-    background-color: silver;
+    background-color: white;
+	background-position: center;
+	background-size: 100%;
+	text-align: center;
+	}
+	.ramka3{
+	height: auto;
+	position: center;
+    margin: 0 auto;
+    border-color: white;
+    border-style:solid;
+ 	border-width: 5px;
+    background-color: yellow;
 	background-position: center;
 	background-size: 100%;}
 
@@ -71,13 +105,42 @@
 
 	</head>  
 	<body> 
+		<header>
+			<div class = "title">Автокола XXI век</div>
+<div class = "menu">
+	<ul class= "menu">
+  <li><a href = "#">Контакты</a></li>
+  <li><a href = "#">О нас</a></li>
+  <li><a href = "#">Услуги</a></li>
+</ul>
+  
+		</header>
+
+
 		<div class="ramka1">
 		<!-- <img src= "../img/Фон.jpg" class="img-priborka"> -->
 			<button class="knopka"> оо</button>
 		</div>
 
 		<div class="ramka2">
+			<div class="content"><font size="+3">
+<h1>Автошкола «XXI Век»: доступность, профессионализм, надежность!</h1>
 
+<h2>Звоните: +7 (495) 227-26-32. Наш адрес: </h2>
+
+	<h3>г. Москва, м. Рязанский проспект, ул. Новокузьминская, дом 25,</h3>
+
+
+<p>Хотите ощущать удовольствие от поездки? Стремитесь стать уверенным участником дорожного движения?
+Цените умение быстро принимать правильное решение даже в самых экстремальных ситуациях? </p>
+
+<p>С нами вы сможете реализовать задуманное! Автошкола «XXI Век» – это оптимальное сочетание технических возможностей и педагогического опыта, направленных на достижение максимального результата в обучении.
+Мы – одно из немногих учебных заведений, ориентирующихся на требования европейских стандартов. </p>
+
+<p>Наши выпускники становятся обладателями прав международного образца, и это – дополнительное доказательство высокого качества предоставляемых автошколой услуг. 
+Мы ориентируемся на индивидуальные возможности клиентов, именно поэтому обучаться у нас – удобно.</p>
+</font>
+</div>
 		</div>
 
  
