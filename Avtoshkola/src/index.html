@@ -146,54 +146,6 @@
 		background: #FF6347; 
 	}
 
-	button.knopka:hover:after {
-		color: black;
-		padding: 5px;
-		/*Сюда добавь Нужные свойства*/
-		
-		background-color: #fff;
-		position: absolute;
-	}
-	/*Кнопка 1 !!! При Наведнии*/
-	button.knopka._1:hover:after {
-		content: "Текст"; /*Текст при наведении на 1 кнопку*/
-	}
-
-	/*Кнопка 2 !!! При Наведнии*/
-	button.knopka._2:hover:after {
-		content: "Текст"; /*Текст при наведении на 2 кнопку*/
-	}
-
-	/*Кнопка 3 !!! При Наведнии*/
-	button.knopka._3:hover:after {
-		content: "Текст"; /*Текст при наведении на 3 кнопку*/
-	}
-
-	/*Кнопка 4 !!! При Наведнии*/
-	button.knopka._4:hover:after {
-		content: "Текст"; /*Текст при наведении на 4 кнопку*/
-	}
-
-	/*Кнопка 5 !!! При Наведнии*/
-	button.knopka._5:hover:after {
-		content: "Текст"; /*Текст при наведении на 5 кнопку*/
-	}
-
-	/*Кнопка 6 !!! При Наведнии*/
-	button.knopka._6:hover:after {
-		content: "Текст"; /*Текст при наведении на 6 кнопку*/
-	}
-
-	/*Кнопка 7 !!! При Наведнии*/
-	button.knopka._7:hover:after {
-		content: "Текст"; /*Текст при наведении на 7 кнопку*/
-	}
-
-	/*Кнопка 8 !!! При Наведнии*/
-	button.knopka._8:hover:after {
-		content: "Текст"; /*Текст при наведении на 8 кнопку*/
-	}
-
 	</style> 
 	
 	<!— Это уже не CSS—> 
@@ -250,5 +202,47 @@
  
 </body> 
 
+<script>
+	
+	var ramka1 = document.querySelector(".ramka1")
+	var MassivKnopok = document.querySelectorAll(".knopka");
+	var MassivPosKnopok = [[23,44],[46.2,32.4],[54,32.4],[56.2,32.4],[47.3,39.1],[51.4,34.4],[55.4,46.4],[47.4,46.4]];
+
+	var ContentInKnopki = [
+		"<div style='width: 120px; height:120px; background-color: #fff;'>Кароче че хочешь сюда могешь</div>",
+		"<img src='../лев.jpg' width=580> Suda Че хочешь ставишь",
+		"<img src='../маыпввы.jpg>",
+		"<img src='../лев.jpg'>",
+		"<img src='../лев.jpg'>",
+		"<img src='../лев.jpg'>",
+		"<img src='../лев.jpg'>",
+		"<img src='../лев.jpg'>"
+	]
+
+	var block = undefined;
+
+	for(var i = 0; i < MassivKnopok.length; i++){
+		var knopka = MassivKnopok[i];
+		knopka.addEventListener("mouseover", showBlock,false);
+		knopka.addEventListener("mouseout", showBlock,false);
+	}
+
+	function showBlock(event){
+		var knopka = event.target;
+		if(event.type === "mouseover" && block === undefined){
+			var id = knopka.className.split(" ")[1].slice(1,) - 1;
+			block = document.createElement("div");
+			block.style.position = "absolute";
+			block.style.left = MassivPosKnopok[id][0]+ 3 + "%";
+			block.style.top = MassivPosKnopok[id][1] + "%";
+			block.innerHTML = ContentInKnopki[id];
+			ramka1.appendChild(block);
+		}else if(event.type === "mouseout" && block !== undefined){
+			ramka1.removeChild(block);
+			block = undefined;
+		}
+	}
+
+</script>
 
 </html>
