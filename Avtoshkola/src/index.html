@@ -13,45 +13,51 @@
 
 		<style> 
 		header {
- display: block; /* Для старых браузеров */
- height: 100px; /* Высота шапки */
- background: url(../img/background.jpg) no-repeat center bottom;
-}
-.header-bg img {
-    position: relative; /* Относительное позиционирование */
-    top: 40px; /* Сдвигаем картинку вниз */
-   }
-   .content{
-   	position: center;
-   	height: 800px;
-   }
-   .title{
- font-size: 36px;
- padding-top: 10px;
- text-align: center;
-}
-.menu{
- list-style: none;
- position: absolute;
- top: 10px;
- right: 300px;
-}
+		 display: block; /* Для старых браузеров */
+		 height: 100px; /* Высота шапки */
+		 background: url(../img/background.jpg) no-repeat center bottom;
+		}
+		.header-bg img {
+		    position: relative; /* Относительное позиционирование */
+		    top: 40px; /* Сдвигаем картинку вниз */
+		   }
+		   .content{
+		   	position: center;
+		   	height: 800px;
+		   }
+		   .title{
+		 font-size: 36px;
+		 padding-top: 10px;
+		 text-align: center;
+		}
+		.menu{
+		 list-style: none;
+		 position: absolute;
+		 top: 10px;
+		 right: 300px;
+		}
 
 
 	
 		.ramka1{
-	height: 800px;
-	position: center;
+	position: relative;
+	width: 100%;
     margin: 0 auto;
-    border-color: silver;
+    border-color: #141423;
     border-style:solid;
     border-radius: 28px;
     border-width: 5px;
-    background-color:white; 
-    background: url(../img/Фон.jpg) no-repeat;
-    background-height: contain;
-	background-position: center;
-	background-size: 100%;} 
+    overflow: hidden;
+    /*background-color:white; */
+    /*background: url(../img/Фон.jpg) no-repeat;*/
+    /*background-height: contain;*/
+	/*background-position: center;*/
+	/*background-size: 100%; */
+}
+
+	.ramka1 > img {
+		width: inherit;
+	}
 
 
 		.ramka2{
@@ -87,17 +93,107 @@
 		button.knopka {
 	size:cover;
 	color: #fff; 
-	position:   ;
-	left: 200px;
+	position: absolute;
 	background: #FFA500; 
 	padding: 5px; 
 	border-radius: 29px;
 	border: 2px solid #FF8247;
-	} 
+	}
+
+	button.knopka._1 {
+		left: 23%;
+		top: 44%;
+		padding: 20px;
+	}
+
+	button.knopka._2 {
+		left: 46.2%;
+		top: 32.4%;
+	}
+
+	button.knopka._3 {
+		left: 54%;
+		top: 32.4%;
+	}
+
+	button.knopka._4 {
+		left: 56.2%;
+		top: 32.4%;
+	}
+
+	button.knopka._5 {
+		left: 47.3%;
+		top: 39.1%;
+	}
+
+	button.knopka._6 {
+		left: 51.4%;
+		top: 34.4%;
+		padding: 4px;
+	}
+
+	button.knopka._7 {
+		left: 55.4%;
+		top: 46.4%;
+	}
+
+	button.knopka._8 {
+		left: 47.4%;
+		top: 46.4%;
+	}
 
 	button.knopka:hover { 
-	background: #FF6347; 
+		background: #FF6347; 
 	}
+
+	button.knopka:hover:after {
+		color: black;
+		padding: 5px;
+		/*Сюда добавь Нужные свойства*/
+		
+		background-color: #fff;
+		position: absolute;
+	}
+	/*Кнопка 1 !!! При Наведнии*/
+	button.knopka._1:hover:after {
+		content: "Текст"; /*Текст при наведении на 1 кнопку*/
+	}
+
+	/*Кнопка 2 !!! При Наведнии*/
+	button.knopka._2:hover:after {
+		content: "Текст"; /*Текст при наведении на 2 кнопку*/
+	}
+
+	/*Кнопка 3 !!! При Наведнии*/
+	button.knopka._3:hover:after {
+		content: "Текст"; /*Текст при наведении на 3 кнопку*/
+	}
+
+	/*Кнопка 4 !!! При Наведнии*/
+	button.knopka._4:hover:after {
+		content: "Текст"; /*Текст при наведении на 4 кнопку*/
+	}
+
+	/*Кнопка 5 !!! При Наведнии*/
+	button.knopka._5:hover:after {
+		content: "Текст"; /*Текст при наведении на 5 кнопку*/
+	}
+
+	/*Кнопка 6 !!! При Наведнии*/
+	button.knopka._6:hover:after {
+		content: "Текст"; /*Текст при наведении на 6 кнопку*/
+	}
+
+	/*Кнопка 7 !!! При Наведнии*/
+	button.knopka._7:hover:after {
+		content: "Текст"; /*Текст при наведении на 7 кнопку*/
+	}
+
+	/*Кнопка 8 !!! При Наведнии*/
+	button.knopka._8:hover:after {
+		content: "Текст"; /*Текст при наведении на 8 кнопку*/
+	}
+
 	</style> 
 	
 	<!— Это уже не CSS—> 
@@ -107,19 +203,27 @@
 	<body> 
 		<header>
 			<div class = "title">Автокола XXI век</div>
-<div class = "menu">
-	<ul class= "menu">
-  <li><a href = "#">Контакты</a></li>
-  <li><a href = "#">О нас</a></li>
-  <li><a href = "#">Услуги</a></li>
-</ul>
+			<div class = "menu">
+				<ul class= "menu">
+			  <li><a href = "#">Контакты</a></li>
+			  <li><a href = "#">О нас</a></li>
+			  <li><a href = "#">Услуги</a></li>
+			</ul>
   
 		</header>
 
 
 		<div class="ramka1">
 		<!-- <img src= "../img/Фон.jpg" class="img-priborka"> -->
-			<button class="knopka"> оо</button>
+			<button class="knopka _1"></button>
+			<button class="knopka _2"></button>
+			<button class="knopka _3"></button>
+			<button class="knopka _4"></button>
+			<button class="knopka _5"></button>
+			<button class="knopka _6"></button>
+			<button class="knopka _7"></button>
+			<button class="knopka _8"></button>
+			<img src="../img/Фон.jpg" alt="Мащина">
 		</div>
 
 		<div class="ramka2">
