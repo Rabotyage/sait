@@ -75,6 +75,18 @@ a {text-decoration: none; /*убираем подчеркивание текст
   vertical-align:top;
 }
 .menu-main li:last-child:after {content: none;}
+.menu-main p{
+	 position: relative;
+	 text-decoration: none;
+  font-family: sans-serif;
+  letter-spacing: 2px;
+  position: relative;
+  padding-bottom: 20px;
+  margin: 0 34px 0 30px;
+  font-size: 10px;
+  text-transform: uppercase;
+  display: inline-block;
+}
 .menu-main a {
   text-decoration: none;
   font-family: 'Ubuntu Condensed', sans-serif;
@@ -170,81 +182,29 @@ a {text-decoration: none; /*убираем подчеркивание текст
 
 	</head>  
 	<body> 
-		<div class = "title"> <a href="https://rabotyage.github.io/sait/Avtoshkola/src/index.html"><img src="../img/logo.png"></a></div>
+		<div class = "title"> <a href="https://rabotyage.github.io/sait/Avtoshkola/src/index.html">
+			<img src="../img/logo.png"></a></div>
 			<ul class="menu-main">
-  <li><a href="">Контакты</a></li>
-  <li><a href="">О Нас</a></li>
-  <li><a href="">Наши сертификаты</a></li>
-  <li><a href="">Цены</a></li>
+				<p></p>
+<li><a href="prices.html">Цены</a></li>
+  <li><a href="sertificats.html">Наши сертификаты</a></li>
+  <li><a href="about.html">О Нас</a></li>
+  <li><a href="contacts.html">Контакты</a></li>
 </ul>
 		
 		</div>
 
 		<div class="ramka2">
-			<div class="content"><font size="+3">
-<h1>Автошкола «XXI Век»: доступность, профессионализм, надежность!</h1>
-
-<h2>Звоните: +7 (495) 227-26-32. Наш адрес: </h2>
-
-	<h3>г. Москва, м. Рязанский проспект, ул. Новокузьминская, дом 5,</h3>
-
-
-<p>Хотите получать удовольствие от поездки? Стремитесь стать уверенным участником дорожного движения?
-Цените умение быстро принимать правильное решение даже в самых экстремальных ситуациях? </p>
-
-<p>С нами вы сможете реализовать задуманное! Автошкола «XXI Век» – это оптимальное сочетание технических возможностей и педагогического опыта, направленных на достижение максимального результата в обучении.
-Мы – одно из немногих учебных заведений, ориентирующихся на требования европейских стандартов. </p>
-
-<p>Наши выпускники становятся обладателями прав международного образца, и это – дополнительное доказательство высокого качества предоставляемых автошколой услуг. 
-Мы ориентируемся на индивидуальные возможности клиентов, именно поэтому обучаться у нас – удобно.</p>
-</font>
-</div>
+			
+<img src="..img/s1.jpg">1</img>
+<img src="..img/s2.jpg">2</img>
+<img src="..img/s3.jpg">3</img>
+<img src="..img/s4.jpg">4</img>
 		</div>
 
  
 </body> 
 
-<script>
-	
-	var ramka1 = document.querySelector(".ramka1")
-	var MassivKnopok = document.querySelectorAll(".knopka");
-	var MassivPosKnopok = [[23.5,46],[46.2,32.4],[54,32.4],[56.2,32.4],[47.3,39.1],[51.4,34.4],[55.4,46.4],[47.4,46.4]];
-	var ContentInKnopki = [
-		"<div style='width: 120px; height:120px; background-color: #fff;'>Цены</div>",
-		"<img src='../лев.jpg' width=580> Ещё что-то",
-		"<img src='../лев.jpg>",
-		"<img src='../лев.jpg'>",
-		"<img src='../лев.jpg'>",
-		"<img src='../лев.jpg'>",
-		"<img src='../лев.jpg'>",
-		"<img src='../лев.jpg'>"
-	]
-	var block = undefined;
-	for(var i = 0; i < MassivKnopok.length; i++){
-		var knopka = MassivKnopok[i];
-		knopka.addEventListener("mouseover", showBlock,false);
-		knopka.addEventListener("mouseout", showBlock,false);
-	}
-	for(var i = 0; i < MassivKnopok.length; i++){
-		console.log(MassivKnopok[i]);
-		MassivKnopok[i].style.left = MassivPosKnopok[i][0] + "%";
-		MassivKnopok[i].style.top = MassivPosKnopok[i][1] + "%";
-	}
-	function showBlock(event){
-		var knopka = event.target;
-		if(event.type === "mouseover" && block === undefined){
-			var id = knopka.className.split(" ")[1].slice(1,) - 1;
-			block = document.createElement("div");
-			block.style.position = "absolute";
-			block.style.left = MassivPosKnopok[id][0]+ 3 + "%";
-			block.style.top = MassivPosKnopok[id][1] + "%";
-			block.innerHTML = ContentInKnopki[id];
-			ramka1.appendChild(block);
-		}else if(event.type === "mouseout" && block !== undefined){
-			ramka1.removeChild(block);
-			block = undefined;
-		}
-	}
-</script>
+
 
 </html>
